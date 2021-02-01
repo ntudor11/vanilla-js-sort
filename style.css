@@ -1,0 +1,168 @@
+@font-face {
+  font-family: AvenirBook;
+  src: url(avenirFont.otf);
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  font-family: AvenirBook, Helvetica, Arial, sans-serif;
+}
+
+.headerContainer {
+  background-color: #333333;
+  color: #fff;
+  text-align: center;
+  font-size: 20pt;
+  padding-top: .75em;
+  padding-bottom: .5em;
+}
+
+.headerContainer p {
+  margin: 0;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: .5em 0 1em 0;
+}
+
+.btn {
+  flex-basis: 5rem;
+  background-color: #72C3DC;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1em;
+  margin: .25em;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px #2B8EAD;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #66b7d0;
+}
+
+.btn:active {
+  box-shadow: 0 2px #2B8EAD;
+}
+
+/* divs to be sorted */
+.sortable {
+  background-color: #EFEFEF;
+  font-size: 1rem;
+  text-align: center;
+  padding: .5rem 0;
+  margin-bottom: 5px;
+  border-left: 10px solid;
+  margin: 10px auto;
+  width: 85%;
+  transition: max-height 2000ms ease-in-out;
+}
+
+.sortable p {
+  width: 100%;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* custom styling for blocks based on given UI design */
+#block1, #block8 {
+  border-color: #6F98A8;
+}
+
+#block2, #block4 {
+  border-color: #2B8EAD;
+}
+
+#block3, #block5, #block9 {
+  border-color: #2F454E;
+}
+
+#block6, #block7 {
+  border-color: #BFBFBF;
+}
+
+.footer {
+  text-align: center;
+  font-style: italic;
+}
+
+/* MOBILE FIRST - hence media query is for screens larger than 576px */
+@media only screen and (min-width: 576px) {
+  .headerContainer {
+    background-color: rgba(0,0,0,0);
+    color: #000;
+  }
+
+  .container {
+    border-top: 5px solid #BFBFBF;
+    height: 100vh;
+    background-color: #EFEFEF;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .btnContainer {
+    margin: 2em auto;
+    flex-direction: column;
+    flex-basis: 20%;
+    order: 1;
+  }
+
+  .btn {
+    flex-basis: initial;
+    margin-bottom: 1em;
+  }
+
+  #board {
+    display: grid;
+    width: 100%;
+    order: 0;
+    grid-template-columns: repeat(3, 1fr);
+    flex-basis: 75%;
+  }
+
+  .sortable {
+    width: 100%;
+    height: max(200px, 25vh);
+    display: table;
+    border-left: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sortable p {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 5em;
+  }
+
+  /* custom styling for blocks based on given UI design */
+  #block1, #block8 {
+    background: #6F98A8;
+  }
+
+  #block2, #block4 {
+    background-color: #2B8EAD;
+  }
+
+  #block3, #block5, #block9 {
+    background-color: #2F454E;
+  }
+
+  #block6, #block7 {
+    background-color: #BFBFBF;
+  }
+}

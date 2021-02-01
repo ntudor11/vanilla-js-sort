@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Shuffle Sort</title>
+  </head>
+  <body>
+    <div class="headerContainer">
+      <p>Shuffle and Sort</p>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <div id="btnContainer" class="btnContainer">
+          <button class="btn" onclick="sort((a, b) => Math.random() - 0.5)">
+            SHUFFLE
+          </button>
+          <button class="btn" onclick="sort((a, b) => a.id > b.id)">
+            SORT
+          </button>
+        </div>
+        <div id="board"></div>
+      </div>
+
+      <div class="footer">
+        <p>Shuffle and sort by Tudor Nastasa</p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./board.js"></script>
+  </body>
+</html>
